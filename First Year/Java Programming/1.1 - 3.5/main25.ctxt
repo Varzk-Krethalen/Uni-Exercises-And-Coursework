@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=amount\ divisor
+comment1.target=int\ coincount(int,\ int)
+comment2.params=number
+comment2.target=java.lang.String\ stringcalc(int)
+comment3.params=money
+comment3.target=java.lang.String\ maincount(int)
+numComments=4

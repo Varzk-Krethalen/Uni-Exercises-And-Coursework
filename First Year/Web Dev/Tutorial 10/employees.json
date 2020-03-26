@@ -1,0 +1,21 @@
+{
+	"employees": [
+		{
+			"role": "manager",
+			"firstname":"Mr",
+			"lastname":"Manager",
+			"supervised": [
+				{
+					"role":"Dev",
+					"firstname":"Jane",
+					"lastname":"Doe"
+				},
+				{
+					"role":"Dev",
+					"firstname":"John",
+					"lastname":"Smith"
+				}
+			]
+		}
+	]
+}

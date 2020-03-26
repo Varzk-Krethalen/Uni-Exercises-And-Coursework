@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=student
+comment0.target=void\ add(Student)
+comment0.text=\r\n\ Add\ a\ student\r\n\ @param\ student\ A\ students\ details\r\n
+comment1.params=
+comment1.target=int\ pass()
+comment1.text=\r\n\ Return\ the\ number\ of\ students\ who\ pass\ this\ module\r\n\ @return\ Number\ of\ students\ who\ have\ passed\r\n
+comment2.params=
+comment2.target=int\ fail()
+comment2.text=\r\n\ Return\ the\ number\ of\ students\ who\ fail\ this\ module\r\n\ @return\ Number\ of\ students\ who\ have\ failed\r\n
+comment3.params=
+comment3.target=java.lang.String\ top()
+comment3.text=\r\n\ Return\ the\ name\ of\ the\ student\ with\ the\ highest\ mark\r\n\ \ There\ will\ only\ be\ 1\ students\ who\ has\ the\ highest\ mark\r\n\ @return\ Name\ of\ the\ student\ with\ the\ highest\ mark.\r\n
+comment4.params=
+comment4.target=double\ average()
+comment4.text=\r\n\ Return\ the\ average\ mark\ of\ students\ on\ the\ module\r\n\ @return\ The\ average\ mark\r\n
+numComments=5

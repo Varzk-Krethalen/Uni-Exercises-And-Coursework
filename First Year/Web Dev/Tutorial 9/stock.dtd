@@ -1,0 +1,15 @@
+<!ELEMENT stock (dvd)*>
+<!ELEMENT dvd (title, cast, director, synopsis, releasedate)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT cast (person)*>
+<!ELEMENT person (name, role)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT synopsis (#PCDATA)>
+<!ELEMENT releasedate (#PCDATA)>
+<!ATTLIST dvd
+	genre CDATA #REQUIRED
+	copies CDATA #REQUIRED
+	price CDATA #REQUIRED
+	>

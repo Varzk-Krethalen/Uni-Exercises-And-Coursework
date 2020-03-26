@@ -1,0 +1,391 @@
+/*Boilerplate CSS*/
+
+/**
+ *The following 3 rules are taken from normalize.css v3.0.3
+ *MIT License | github.com/necolas/normalize.css 
+ *If you have attached the normalize.css stylesheet to your HTML documents you can delete the next 3 rules.
+ * Start writing your own CSS stylesheet at line 50.
+ */
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+  max-width: 100%;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove spacing between table cells.
+ */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:solid;
+}
+th{
+	border:solid;
+}
+td{
+	border:solid;
+}
+.table-container{
+	width: 100%;
+	max-width:60em;
+	overflow-y: auto;
+} 
+
+
+/* -----------------------
+Base Styles
+------------------------*/
+
+body{
+	background: linear-gradient(#222, #444);
+	font-family: minion-pro, times, serif;
+	color: #333;
+	font-size: 100%;
+	line-height: 112%;
+	min-height: 65em;
+}
+#wrapper{
+	max-width: 85%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFDFF; /* A nice warmish colour. Mmmm. */
+	padding-right:.65em;
+	padding-left: .65em;
+	padding-top: 1em;
+	position: relative;
+}
+article{
+}
+aside{
+	margin: .5em;
+}
+footer{
+	max-width: 75%;
+	margin-top: .5em;
+}
+header{
+	max-width: 65em;
+	max-width: 60%;
+}
+main{
+	max-width: 65em;
+}
+nav	{
+}
+section  {
+	max-width: 90%;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+}
+article{
+	border-style:double groove;
+	border-width: .2em;
+	margin-bottom:.1em;
+}
+article p{
+	margin-left: 1em;
+}
+
+h6{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.25em;
+	line-height: .625em;
+}
+h5{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.375em;
+	line-height: .65em;
+}
+h4{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.5em;
+	line-height: .675em;
+}
+h3{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.625em;
+	line-height: .725em;
+}
+h2{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.75em;
+	line-height: .8em;
+}
+h1{
+	font-family: 'Eczar', "Times New Roman", Times, serif;
+	font-size: 1.875em;
+	line-height: .875em;
+}
+.post{
+	max-height: 3em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	background-color: #FFF;
+	padding-bottom: .1em;
+	padding-top: .1em;
+}
+
+p{
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
+	color: #111;
+	font-size: 1.15em;
+	line-height: 1.1em;
+	letter-spacing: -.055em;
+	max-width: 90%;
+	text-indent: .5em;
+}
+blockquote{
+	max-width: 65em;
+	font-family: Century Gothic, Century Gothic;
+	font-size: 0.9em;
+	background: #eee;
+	line-height: 2em;
+}
+blockquote:before{
+	content: open-quote;
+	font-size: 4em;
+	line-height:.1em;
+	vertical-align: -.5em;
+	margin-right: .3em;
+}
+blockquote p{
+	font-family:Century Gothic, Century Gothic;
+	display: inline;
+}
+blockquote p:after{
+	content: close-quote;
+	font-size: 4em;
+	line-height:.1em;
+	vertical-align: -.5em;
+	margin-left: .3em;
+	display: inline;
+}
+.center{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ul	{
+}
+li{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: .95em;
+	line-height: 1.2em;
+}
+ol	{
+}
+dl	{
+}
+dt	{
+}
+dd	{
+}
+
+em	{
+}
+strong	{
+}
+small	{
+}
+cite	{
+}
+time	{
+}
+
+figure{
+	max-width: 60%;
+}
+figcaption{
+}
+
+summary{
+	display: block;
+	margin-bottom: .2em;
+	background: #CCC;
+	content: "+";
+	font-weight: bold;
+	width: 20em;
+}
+
+/* -----------------------
+Layout Styles
+------------------------*/
+
+.navbar{
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: .5%;
+	padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: fixed;
+	width: 85%;
+}
+
+.navbar li{
+	float: left;
+	margin-right: 1em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+.navbar a:link{
+	color: #FFF;
+	border-bottom:none;	
+}
+
+.navbar a:visited{
+	color: #FFF;
+	border-bottom:none;	
+}
+
+.linkmenu li{
+	display: inline-block;
+	list-style-type: none;
+	font-size: 1em;
+	line-height: 3em;
+}
+.linkmenu a{
+	color: #FFF;
+	background-color: #FFF;
+	padding: .25em .313em .25em .313em;
+	text-decoration: none;
+}
+.linkmenu a:hover{
+	background-color: #6EC2E5;
+	color: #FFF;
+}
+a:link{
+	color: #05F;
+	text-decoration: none;
+	border-bottom: dashed;
+	border-bottom-width: .063em;
+}
+a:visited{
+	color: #009;
+}
+a:hover,  a:active{
+	color: #0FF;
+}
+details summary:after{
+	content: "-";
+}
+.collapsel1{
+	margin-left: 1em;
+}
+.fluid{
+	width: 100%;
+	max-width: 1024px;
+	overflow: hidden;
+}
+fieldset{
+	max-width: 20.5rem;
+	border-width: .3em;
+	border-style: groove;
+	border-color: #336;
+	margin-bottom: 1em;
+}
+textarea{
+	min-width: 20em;
+	min-height: 5em;
+}
+label{
+	margin-bottom: .5em;
+}
+input{
+	margin-top: .5em;
+}
+
+@media (max-width: 38.25em)
+	{
+	header{
+		margin-top:3em;
+		max-width: 100%;
+	}
+	footer{
+		max-width: 100%;
+	}
+	}
+@media (max-width: 21.7em)
+	{
+	header{
+		margin-top:5.5em;
+	}
+}
+.wavyborder:after{
+	content: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+	overflow: hidden;
+	font-size: 1.3em;
+}
+.wavyborder img{
+	max-width: 70%;
+	float: right;
+	margin-left: 1em;
+	margin-top: .5em;
+}
+.wavyborder p{
+	max-width: 100%;
+}
+	
+/* -----------------------------------------------
+Menu Navigation - block layout for smaller screens
+--------------------------------------------------*/
+
+
+/* ----------------------------------------------------
+Wider screens - i.e. desktop, laptop, tablet landscape
+-------------------------------------------------------*/
+
+@media (min-width: 56em)
+	{
+	.fltrt{
+		float: right;
+		overflow: hidden;
+		width: 25%;
+	}
+	.fltlt{
+		float: left;
+		overflow: auto;
+		width: 72%
+	}
+	.fltlt p{
+		margin-top: .4em;
+	}
+	.clear{
+		clear: both;
+	}
+	.linkmenu{
+		max-width: 15em;
+	}
+	}

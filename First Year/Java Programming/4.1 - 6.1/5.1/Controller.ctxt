@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=aModelOfTM\ aViewOfTM
+comment0.target=Controller(ModelOfTM,\ ViewOfTM)
+comment1.params=buttonName
+comment1.target=void\ process(java.lang.String)
+numComments=2

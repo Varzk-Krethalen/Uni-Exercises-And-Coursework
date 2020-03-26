@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=line
+comment0.target=JavaLine(java.lang.String)
+comment0.text=\r\n\ Constructor\r\n\ @param\ line\ of\ a\ java\ program\r\n
+comment1.params=
+comment1.target=int\ getJavaLineLength()
+comment1.text=\r\n\ Return\ the\ length\ of\ the\ Java\ part\ of\ the\ stored\ line.<PRE>\r\n\ JavaLine\ j\ \=\ new\ JavaLine("int\ a;\ //\ Declaration");\r\n\ int\ jp\ \=\ j.getJavaLineLength();\r\n\ Would\ set\ jp\ the\ be\ 6</PRE>\r\n\ @return\ The\ length\ of\ the\ Java\ code\ in\ the\ line\r\n
+comment2.params=pos
+comment2.target=java.lang.String\ returnLineWithCommentAt(int)
+comment2.text=\r\n\ Return\ as\ an\ 'indented'\ line\ with\ the\ //\ comment\r\n\ starting\ at\ column\ pos<PRE>\r\n\ JavaLine\ j\ \=\ new\ JavaLine("int\ a;\ //\ Declaration");\r\n\ String\ res\ \=\ j.returnLineWithCommentAt(10);\r\n\ Would\ set\ res\ to\ be\ the\ following\ string\:\r\n\ int\ a;\ \ \ //\ Declaration</PRE>\r\n\ @param\ pos\ Start\ //\ comment\ at\ pos\r\n\ @return\ A\ new\ version\ of\ the\ line\ with\ any\ //\ comment\r\n\ starting\ at\ column\ pos.\r\n
+comment3.params=number
+comment3.target=java.lang.String\ spaces(int)
+comment3.text=\r\n\ Return\ a\ string\ of\ 'number'\ spaces.\r\n\ @param\ number\ of\ spaces\ required\r\n\ @return\ A\ string\ of\ 'number'\ spaces\r\n
+comment4.params=indent
+comment4.target=void\ indentLine(int)
+comment5.params=
+comment5.target=int\ checkBrackets()
+numComments=6

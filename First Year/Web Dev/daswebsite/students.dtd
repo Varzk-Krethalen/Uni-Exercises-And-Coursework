@@ -1,0 +1,13 @@
+<!ELEMENT students (student)*>
+<!ELEMENT student (name, dob, course, dep, level)>
+<!ELEMENT name (firstname, middlenames, lastname)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT middlenames (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT dep (#PCDATA)>
+<!ELEMENT level (#PCDATA)>
+<!ATTLIST student
+	id CDATA #REQUIRED
+	>

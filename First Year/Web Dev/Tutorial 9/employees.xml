@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<employees>
+	<employee role="Manager">
+		<firstname>Mr</firstname>
+		<lastname>Manager</lastname>
+		<supervised>
+			<employee role="Dev">
+				<firstname>Jane</firstname>
+				<lastname>Doe</lastname>
+			</employee>
+			<employee role="Des">
+				<firstname>John</firstname>
+				<lastname>Smith</lastname>
+			</employee>
+		</supervised>
+	</employee>
+</employees>

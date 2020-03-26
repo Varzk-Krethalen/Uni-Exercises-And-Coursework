@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link href="normalize.css" rel="stylesheet" type="text/css">
+		<link href="boilerplate.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>Das Contact Page</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="navbar">
+				<ul>
+					<li><a href="index.html">Main Page</a></li>
+					<li><a href="learning.html">Learning Journal</a></li>
+					<li><a href="tutorial.html">Tutorial Page</a></li>
+					<li><a href="contact.html">Contact Me</a></li>
+				</ul>
+			</nav>
+			<header>
+				<br><br><br>
+				<h1> Contact Me </h1>
+			</header>
+			<section> <h2> Form it up! </h2>
+				<p> Want to contact me? Do through this snazzy little form! </p>
+				<form id="contactform" onsubmit="return false" oninput="level.value = cslide.valueAsNumber">
+					<fieldset>
+						<legend> Your Contact Details </legend>
+						<label for="name"> Name*   </label>
+						<input type="text" id="name" required/>
+						<br>
+						<label for="email"> Email address* </label>
+						<input type="text"  id="email" required/>
+						<br>
+						<label for="url">Website address</label>
+						<input type="text" id="url" value="http://" />
+					</fieldset>
+					<fieldset>
+						<legend> Your useful comments* </legend>
+						<label for="comments"></label>
+						<textarea id="comments" required></textarea>
+					</fieldset>
+					<fieldset>
+						<legend> How bad is this site, on a scale of 0-10? </legend>
+						<label for="slider">Slide this!</label>
+						<br>
+						<input name="cslide" type="range" id="slider" min="0" max="10" value="0" />
+						<output for="slider" name="level"> 0 </output>/10
+					</fieldset>
+					<fieldset>
+						<legend> Would you like more info? </legend>
+						<label for="infoyes"> <input type="radio" id="infoyes"  name="info" value=True/> Indeed so </label>
+						<br>
+						<label for="infono"> <input type="radio" id="infono"  name="info" value=False checked/> I think not </label>
+					</fieldset>
+					<input type="submit" value="Submit thine input" />
+					<p><em> * is a required field </em></p>
+				</form>
+				<br>
+				<p> Alternatively, if really needed, you can directly <a href="mailto:adws10@brighton.ac.uk">Email me!</a> </p>
+			</section>
+			<br>
+			<footer>
+				<a href="http://www.w3.org/html/logo/">
+				<img src="images/HTML5logo.png" width="94" height="110" alt="HTML5 Logo" /></a>
+				<p> For the sake of fanciness, here is the lovely (Creative Commons) HTML5 Logo from the W3C. Isn't it nice? Incidentally, it also links to its info page.</p>
+				<p> The content of this site is created and owned by A.Shafee, and hosted by The University of Brighton. Other credit is given where due. </p>
+			</footer>
+		</div>
+	</body>
+</html>

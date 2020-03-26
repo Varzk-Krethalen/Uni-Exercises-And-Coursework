@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE students SYSTEM "itsuite.it.brighton.ac.uk/adws10/daswebsite/students.dtd">
+<students>
+	<student id="168345233">
+		<name>
+			<firstname>John</firstname>
+			<middlenames>Algernon</middlenames>
+			<lastname>Smith</lastname>
+		</name>
+		<dob>1-1-1034</dob>
+		<course>2345</course>
+		<dep>CME</dep>
+		<level>4</level>
+	</student>
+</students>

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Risk
+comment1.params=x\ y\ z
+comment1.target=void\ set(backend.Risk.level,\ backend.Risk.type,\ java.lang.String)
+comment1.text=\r\n\ Sets\ the\ information\ for\ any\ created\ risk.\r\n
+numComments=2

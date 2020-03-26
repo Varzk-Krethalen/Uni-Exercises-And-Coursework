@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=calc
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ This\ is\ the\ main\ function,\ but\ mostly\ serves\ to\ ask\ the\ questions\ to\ the\ user,\ taking\ input.\r\n\ It\ then\ uses\ a\ couple\ of\ conditionals\ to\ output\ the\ result\ of\ the\ system.\r\n\ I\ have\ used\ bigDecimal\ as\ it\ is\ generally\ one\ of\ the\ recommended\ types\ to\ use\ when\ dealing\ with\r\n\ money,\ rather\ than\ imprecise\ floats\ and\ ints.\r\n
+comment2.params=firstTime\ secondJob\ secondSalary\ creditDebts\ age\ outgoings\ salary\ jobMonths\ risks
+comment2.target=java.util.ArrayList\ checkRisks(boolean,\ boolean,\ java.math.BigDecimal,\ java.math.BigDecimal,\ int,\ java.math.BigDecimal,\ java.math.BigDecimal,\ int,\ java.util.ArrayList)
+comment3.params=salary\ spouseSalary
+comment3.target=java.math.BigDecimal\ calculateLoan(java.math.BigDecimal,\ java.math.BigDecimal)
+comment3.text=\r\n\ Runs\ a\ quick\ calculation\ to\ find\ the\ maximum\ loan\ an\ applicant\ can\ have.\r\n
+comment4.params=firstName\ lastName\ risks
+comment4.target=java.util.ArrayList\ creditAndCounty(java.lang.String,\ java.lang.String,\ java.util.ArrayList)
+comment4.text=\r\n\ Searches\ through\ a\ text\ file\ to\ find\ any\ existing\ records\ under\ their\ name,\ and\ if\ records\ exist,\ add\r\n\ them\ to\ the\ list\ of\ risks,\ then\ return\ that\ list.\r\n
+numComments=5

@@ -1,0 +1,10 @@
+{
+	"course": {
+		"module": {
+			"code":"CI135",
+			"title":"Web Dev",
+			"level":"4",
+			"credits":"20"
+			}
+	}
+}

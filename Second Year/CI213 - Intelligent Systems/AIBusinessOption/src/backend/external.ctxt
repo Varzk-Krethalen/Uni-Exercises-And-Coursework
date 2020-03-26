@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=external
+comment1.params=risks\ max
+comment1.target=void\ refer(java.util.ArrayList,\ java.math.BigDecimal)
+comment1.text=\r\n\ Assume\ it\ would\ add\ to\ a\ referral\ list\ or\ somesuch\ in\ a\ full\ system.\r\n\ As\ it\ is,\ just\ creates\ a\ String\ of\ the\ risks\ for\ that\ person,\ \r\n\ and\ the\ maximum\ loan\ they\ can\ be\ allowed\ if\ those\ risks\ are\r\n\ acceptable.\r\n\ Currently\ just\ prints\ it.\r\n
+comment2.params=risks
+comment2.target=boolean\ checkLevels(java.util.ArrayList)
+comment2.text=\ \r\n\ Checks\ through\ the\ list\ of\ risks,\ and\ if\ there\ are\ any\ high\r\n\ risks\ or\ more\ than\ 1\ medium,\ returns\ true.\r\n
+comment3.params=risks
+comment3.target=boolean\ checkMidHigh(java.util.ArrayList)
+comment3.text=\r\n\ Returns\ true\ if\ there\ are\ any\ medium\ or\ high\ risks.\r\n
+numComments=4

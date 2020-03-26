@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=coin1\ howMany1\ coin2\ howMany2
+comment1.target=void\ checkRecord(int,\ int,\ int,\ int)
+comment2.params=ok\ fmt\ params
+comment2.target=void\ check(boolean,\ java.lang.String,\ java.lang.Object[])
+comment3.params=str
+comment3.target=void\ test(java.lang.String)
+comment4.params=
+comment4.target=void\ anotherTest()
+comment5.params=str
+comment5.target=void\ testAppend(java.lang.String)
+numComments=6

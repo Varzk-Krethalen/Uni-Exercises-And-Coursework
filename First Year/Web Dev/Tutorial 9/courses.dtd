@@ -1,0 +1,8 @@
+<!ELEMENT course (module)*>
+<!ELEMENT module(title, level)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT level (#PCDATA)>
+<!ATTLIST module
+	code CDATA #REQUIRED
+	credits CDATA #REQUIRED
+	>

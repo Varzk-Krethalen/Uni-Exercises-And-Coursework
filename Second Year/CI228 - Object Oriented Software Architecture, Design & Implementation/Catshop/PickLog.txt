@@ -1,0 +1,13 @@
+View in Notepad++ or similar text editor - Notepad uses \r\n for line-breaks, not the \n we do.
+Example order is below for reference.
+
+Order number: 001
+0001   40 inch LED HD (  1) £ 269.00
+0003   Toaster        (  4) £  79.96
+0004   Watch          (  2) £  59.98
+0007   32Gb USB2 driv (  3) £  20.97
+----------------------------
+Total                       £ 429.91
+
+
+

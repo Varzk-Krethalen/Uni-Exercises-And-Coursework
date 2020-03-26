@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Program()
+comment0.text=\r\n\ Constructor\r\n
+comment1.params=line
+comment1.target=void\ addLine(java.lang.String)
+comment1.text=\r\n\ Add\ the\ next\ line\ of\ Java\ code\ to\ the\ stored\ program\r\n\ @param\ line\ A\ line\ of\ Java\ code\r\n
+comment2.params=
+comment2.target=java.lang.String\ indentProgram()
+comment2.text=\r\n\ Return\ the\ Java\ program\ as\ a\ string\r\n\ with\ //\ comments\ indented\ vertically\r\n\ \ \ \ \ \ etc.\r\n\ @return\ The\ Java\ program\ as\ a\ string\r\n
+comment3.params=
+comment3.target=int\ findMaxJavaLineLength()
+comment3.text=\r\n\ Find\ the\ longest\ source\ line\ (Not\ including\ the\ //\ comment)\r\n\ of\ Java\ code\ in\ the\ data\ structure\ stored.\r\n\ @return\ the\ length\ of\ the\ longest\ java\ code\ line\r\n
+numComments=4

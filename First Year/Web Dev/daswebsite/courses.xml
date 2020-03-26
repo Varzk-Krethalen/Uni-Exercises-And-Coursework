@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE courses SYSTEM "itsuite.it.brighton.ac.uk/adws10/daswebsite/courses.dtd">
+<course>
+	<module code="CI135" credits="20">
+		<title>Web Dev</title>
+		<level>4</level>
+	</module>
+</course>

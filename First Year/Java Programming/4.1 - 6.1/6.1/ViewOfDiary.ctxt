@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ViewOfDiary()
+comment1.params=cont
+comment1.target=void\ setController(Controller)
+comment1.text=\r\n\ Tell\ the\ view\ where\ the\ controller\ is\r\n\ @param\ cont\ The\ controller\r\n
+comment2.params=aModelOfDiary\ arg
+comment2.target=void\ update(java.util.Observable,\ java.lang.Object)
+comment2.text=\r\n\ Called\ when\ the\ model\ has\ changed\r\n\ @param\ aModelOfDiary\ The\ model\ of\ the\ ticket\ machine\r\n\ @param\ arg\ Any\ arguments\r\n
+numComments=3

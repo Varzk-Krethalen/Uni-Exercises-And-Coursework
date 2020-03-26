@@ -1,0 +1,44 @@
+{
+	"people": [{
+		"category": "rescmp",
+		"name": "Alan Turing",
+		"subject": {
+			"title": "Computer Science",
+			"url": "http://en.wikipedia.org/wiki/Computer_science"
+		},
+		"institution": {
+			"name": "University of Cambridge",
+			"url": "http://www.cam.ac.uk/",
+			"country": "UK"
+		},
+		"url": "http://en.wikipedia.org/wiki/Alan_Turing"
+	},
+	{
+		"category": "rescmp",
+		"name": "Donald Knuth",
+		"subject": {
+			"title": "Computer Science",
+			"url": "http://en.wikipedia.org/wiki/Computer_science"
+		},
+		"institution": {
+			"name": "Stanford University",
+			"url": "http://www.stanford.edu/",
+			"country": "USA"
+		},
+		"url": "http://en.wikipedia.org/wiki/Donald_Knuth"
+	},
+	{
+		"category": "resmath",
+		"name": "Claude Shannon",
+		"subject": {
+			"title": "Mathematics",
+			"url": "http://en.wikipedia.org/wiki/Mathematics"
+		},
+		"institution": {
+			"name": "MIT",
+			"url": "http://www.mit.edu/",
+			"country": "USA"
+		},
+		"url": "http://en.wikipedia.org/wiki/Claude_E._Shannon"
+	}]
+}

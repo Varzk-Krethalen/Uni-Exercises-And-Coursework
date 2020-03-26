@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE stock [
+<!ELEMENT stock (dvd)*>
+<!ELEMENT dvd (title, cast, director, synopsis, releasedate)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT cast (person)*>
+<!ELEMENT person (name, role)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT synopsis (#PCDATA)>
+<!ELEMENT releasedate (#PCDATA)>
+<!ATTLIST dvd
+	genre CDATA #REQUIRED
+	copies CDATA #REQUIRED
+	price CDATA #REQUIRED
+	>
+]>
+<stock>
+	<dvd genre = "SF" copies="82" price="1.99">
+		<title>Back To The Future</title>
+		<cast>
+			<person>
+				<name>John Doe</name>
+				<role>Extra 1</role>
+			</person>
+			<person>
+				<name>Jane Doe</name>
+				<role>Extra 2</role>
+			</person>
+		</cast>
+		<director>Mr Director</director>
+		<synopsis>A Thing</synopsis>
+		<releasedate>2036-05-31</releasedate>
+	</dvd>
+</stock>

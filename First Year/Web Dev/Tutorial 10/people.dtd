@@ -1,0 +1,11 @@
+<!DOCTYPE people [
+	<!ELEMENT people (person)*>
+	<!ELEMENT person (name,subject,institution,url)>
+	<!ELEMENT subject (title,url)>
+	<!ELEMENT institution (name,url,country)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT title (#PCDATA)>
+	<!ELEMENT url (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+	<!ATTLIST person category CDATA "">
+]>
