@@ -1,0 +1,250 @@
+const int rx = 6;
+const int tx = 7;
+const int rts = 8;
+const int cts = 9;
+const int stopBits = 2;
+const int bitDuration = 4;
+const int led = 13;
+const int toggleTime = 5;
+const int paritySetting = 1; //1 = even, 0 = odd
+const int totalBits = 10 + stopBits;
+
+static char serialString[256] = {};
+static int serialDataCharsWaiting = 0;
+static int serialDataCurrentChar = 0;
+static bool frameBuffer[totalBits] = {};
+
+void setup()
+{
+  set_ready(true);
+  pinMode(led, OUTPUT);
+  pinMode(rx, INPUT);
+  pinMode(tx, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+//  if (Serial.available() > 0 && serialDataCharsWaiting == 0)
+//  {
+//    memset(serialString, 0, sizeof(serialString));
+//    set_ready(false);
+//    int i = 0;
+//    while (Serial.available() > 0 && i < 256)
+//    {
+//      serialString[i] = Serial.read();
+//      Serial.println(serialString[i]);
+//      i++;
+//    }
+//    if (Serial.available() > 0)
+//    {
+//      Serial.flush();
+//      serialString[255] = '\n';
+//    }
+//    serialDataCharsWaiting = i - 1;
+//    serialDataCurrentChar = 0;
+//    Serial.print(serialDataCharsWaiting);
+//    Serial.println(" chars waiting");
+//    set_ready(true);
+//  }
+//  if (serialDataCharsWaiting > 0)
+//  {
+//    set_ready(false);
+//    transfer_data(serialString[serialDataCurrentChar]);
+//    serialDataCurrentChar++;
+//    serialDataCharsWaiting--;
+//    set_ready(true);
+//  }
+//  if (data_incoming())
+//  {
+//    byte dataRecieved = 0;
+//    if (recieve_frame_data(&dataRecieved))
+//    {
+//      set_ready(false);
+//      toggle_led();
+//      Serial.print((char)dataRecieved);
+//      set_ready(true);
+//    }
+//  }
+  
+  if (Serial.available() > 0)                 //64 char buffer here
+  {
+    set_ready(false);
+    //toggle_led();
+    transfer_data(Serial.read());
+    set_ready(true);
+  }
+  if (data_incoming())
+  {
+    byte dataRecieved = 0;
+    if (recieve_frame_data(&dataRecieved))
+    {
+      set_ready(false);
+      toggle_led();
+      Serial.print((char)dataRecieved);
+      set_ready(true);
+    }
+  }
+}
+
+void transfer_data(byte dataToSend)
+{
+  frame_data(dataToSend);
+  send_frame();
+}
+
+void frame_data(byte dataToSend)
+{
+  clear_buffer();
+  frameBuffer[0] = 1;
+  
+  int bitTotal = 0;
+  for (int i = 0; i < 8; i++)                 //adding the data bits to the frame array
+  {
+    bool bitToSend = bitRead(dataToSend, i);
+    frameBuffer[i + 1] = bitToSend;
+    bitTotal += bitToSend;
+  }
+
+  int parityBit = get_parity(bitTotal);
+  frameBuffer[9] = parityBit;                 // adding parity based on total data bit value
+  frameBuffer[10] = 1;
+  if (stopBits == 2) frameBuffer[11] = 1;     // adding second stop bit if required.
+}
+
+int get_parity(int bitTotal)
+{
+  if (paritySetting == 1)
+  {
+    return (bitTotal % 2 == 0) ? 0 : 1;
+  }
+  else
+  {
+    return (bitTotal % 2 == 1) ? 0 : 1;
+  }
+}
+
+void send_frame()
+{
+  if (clear_to_send())                        // what if we recieve while waiting?
+  {
+    for(int i = 0; i < totalBits; i++)        //send each bit in the frame
+    {
+      send_bit(frameBuffer[i]);
+      digitalWrite(tx, LOW);                  // move out?
+    }
+  }
+  else
+  {
+    Serial.println("Not clear to send");
+  }
+}
+
+void send_bit(bool state)
+{
+  digitalWrite(tx, state);
+  delay(bitDuration);
+}
+
+bool clear_to_send()
+{
+  return digitalRead(cts);
+}
+
+void clear_buffer()
+{
+  memset(frameBuffer, 0, sizeof(frameBuffer));
+}
+
+void set_ready(bool state)
+{
+  digitalWrite(rts, state);
+}
+
+bool recieve_frame_data(byte* data)
+{
+  delay((bitDuration / 2));
+  if (data_incoming() == HIGH)                                //checking valid length start bit
+  {
+    for (int i = 0; i < 8; i++)                               //recieve data
+    {
+      bitWrite(*data, i, receive_bit());
+    }
+
+    bool parityBit = receive_bit();                           //get parity bit
+    bool firstStopBit = receive_bit();                        //main stop bit
+    bool secondStopBit = (stopBits == 2) ? receive_bit(): 1;  //defaults second stop bit to 1 if not required
+    
+    if (validate_frame(*data, parityBit, firstStopBit, secondStopBit))
+    {
+      return true;
+    }
+    else
+    {
+      Serial.println("invalid frame");
+      Serial.print("data: ");
+      for (int i = 0; i < 8; i++)
+      {
+        Serial.print(bitRead(*data, i));
+      }
+      Serial.print(" ,parity: ");
+      Serial.print(parityBit);
+      Serial.print(" ,firstStopBit: ");      
+      Serial.print(firstStopBit);
+      Serial.print(" ,secondStopBit: ");
+      Serial.println(secondStopBit);
+    }
+  }
+  else
+  {
+    Serial.println("invalid start length");
+  }
+  return false;
+}
+
+bool receive_bit()
+{
+  delay(bitDuration);
+  return data_incoming();
+}
+
+bool data_incoming()
+{
+  return digitalRead(rx);
+}
+
+bool validate_frame(byte data, bool parityBit, bool firstStopBit, bool secondStopBit)
+{
+  int bitTotal = parityBit;
+  for (int i = 0; i < 8; i++)
+  {
+    bitTotal += bitRead(data, i);
+  }
+
+  if (parity_valid(bitTotal) && firstStopBit == true)
+  {
+    return (stopBits == 2) ? secondStopBit: true;
+  }
+  
+  return false;
+}
+
+bool parity_valid(int bitTotal)
+{
+  if (paritySetting == 1)
+  {
+    return (bitTotal % 2 == 0);
+  }
+  else
+  {
+    return (bitTotal % 2 == 1);
+  }
+}
+
+void toggle_led()
+{
+    digitalWrite(led, HIGH);
+    delay(toggleTime);
+    digitalWrite(led, LOW);
+    delay(toggleTime);
+}
